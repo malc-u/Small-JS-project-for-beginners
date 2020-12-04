@@ -47,3 +47,31 @@ function convertingSeconds(sec){
     return result;
 };
 
+//Function counting time in HH:MM:SS format
+function timeTwoCount() {
+    timeTwoPassed  += 1;
+    timerTwoDisplay.innerHTML = convertingSeconds(timeTwoPassed); 
+};
+
+//Function starting the HH:MM:SS stopwatch
+function timerStartTwo() {
+    if (!timerTwoOn) {
+        timerTwoOn = true;
+        timerTwo = setInterval(timeTwoCount, 1000);
+    }
+};
+
+//Function stoping the HH:MM:SS stopwatch
+function timerStopTwo() {
+    clearInterval(timerTwo);
+    timerTwoOn = false;
+
+}
+
+//Function resetting the HH:MM:SS stopwatch
+function timerResetTwo() {
+    clearInterval(timerTwo);
+    timerTwoOn = false;
+    timeTwoPassed = 0;
+    timerTwoDisplay.innerHTML = convertingSeconds(timeTwoPassed);  
+}
