@@ -34,3 +34,16 @@ function timeReset() {
     timerDisplay.innerHTML = timePassed + " seconds";    
 }
 
+//function converting time passed in seconds to HH:MM:SS format
+function convertingSeconds(sec){
+    let hours = Math.floor(sec / 3600);
+    let minutes = Math.floor((sec - (hours * 3600)) / 60);
+    let seconds = sec - (hours * 3600) - (minutes * 60);
+    seconds = Math.round(seconds * 100) / 100
+          
+    let result = (hours < 10 ? "0" + hours : hours);
+    result += ":" + (minutes < 10 ? "0" + minutes : minutes);
+    result += ":" + (seconds < 10 ? "0" + seconds : seconds);
+    return result;
+};
+
