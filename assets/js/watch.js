@@ -75,3 +75,18 @@ function timerResetTwo() {
     timeTwoPassed = 0;
     timerTwoDisplay.innerHTML = convertingSeconds(timeTwoPassed);  
 }
+
+function startBoth(){
+    timeStart();
+    timerStartTwo();
+}
+
+function stopBoth(){
+    timeStop();
+    timerStopTwo();
+}
+
+function resetBoth(){
+    timeReset();
+    timerResetTwo();
+}
