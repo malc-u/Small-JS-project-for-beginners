@@ -4,19 +4,23 @@ const timerTwoDisplay = document.getElementById("timertwo");
 let timer;
 let timePassed = 0;
 let timerOn = false;
+let timerTwo;
+let timeTwoPassed = 0;
+let timerTwoOn = false;
 
-//Function counting time in seconds only
+//Fucntion counting time in seconds only
 function timeCount() {
-    timePassed  += 1;   
-    timerDisplay.innerHTML = timePassed + " seconds";    
+        timePassed  += 1;
+        timerDisplay.innerHTML = timePassed + " seconds";    
 };
 
 //Function starting second counting
 function timeStart() {
     if (!timerOn) {
-    timerOn = true;
-    timer = setInterval(timeCount, 1000);
+        timerOn = true;
+        timer = setInterval(timeCount, 1000);
     }
+
 };
 
 //Function stopping second counting
